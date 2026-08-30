@@ -1,23 +1,83 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function SiteFooter() {
   return (
     <footer className="site-footer">
-      <div className="footer-ribbon"><div className="page-container ribbon-inner">
-        <div><span className="ribbon-symbol">~</span><p><strong>See a burst or major leak?</strong><small>Use the reporting guidance so the right details reach the response team.</small></p></div>
-        <Link href="/report-a-problem">Report a problem <span>→</span></Link>
-      </div></div>
+      <div className="footer-ribbon">
+        <div className="page-container ribbon-inner">
+          <div>
+            <span className="ribbon-symbol">!</span>
+            <p>
+              <strong>Leak, burst or no water?</strong>
+              <small className="text-black">
+                Call with the exact location of the problem.
+              </small>
+            </p>
+          </div>
+          <Link className="footer-alert-link" href="/report-a-problem">
+            Report a problem <span>→</span>
+          </Link>
+        </div>
+      </div>
+
       <div className="page-container footer-grid">
         <div className="footer-brand">
-          <Link className="brand brand-footer" href="/"><span className="brand-mark">M</span><span><strong>MWASCO</strong><small>Mutitu Water & Sanitation</small></span></Link>
-          <p>Clear information and better access to essential water services for the communities we serve.</p>
-          <span className="verification-note">Customer-care contacts pending official verification.</span>
+          <Link className="brand brand-footer" href="/">
+            <Image
+              className="brand-logo"
+              src="/assets/logo.jpg"
+              alt=""
+              width={96}
+              height={96}
+            />
+            <span>
+              <strong>Mutitu Water</strong>
+              <small>Water for prosperity</small>
+            </span>
+          </Link>
+          <p>
+            Clear access to Mutitu Water Project services and customer support.
+          </p>
         </div>
-        <div><h2>Services</h2><Link href="/new-connection">New connections</Link><Link href="/billing-payments">Billing & payments</Link><Link href="/tariffs">Tariffs & charges</Link><Link href="/service-areas">Service areas</Link><Link href="/water-quality">Water quality</Link></div>
-        <div><h2>Customer care</h2><Link href="/interruptions">Water interruptions</Link><Link href="/report-a-problem">Report a problem</Link><Link href="/frequently-asked-questions">FAQs</Link><Link href="/downloads">Downloads & forms</Link><Link href="/contact">Contact & offices</Link></div>
-        <div><h2>Company</h2><Link href="/about">About MWASCO</Link><Link href="/news">News & notices</Link><Link href="/opportunities">Tenders & careers</Link><Link href="/privacy">Privacy policy</Link><Link href="/terms">Terms of use</Link></div>
+
+        <div>
+          <h2>Services</h2>
+          <Link href="/services#new-connection">New connection</Link>
+          <Link href="/services#billing-payments">Billing & payments</Link>
+          <Link href="/services#tariffs">Tariffs & charges</Link>
+          <Link href="/services#service-areas">Service areas</Link>
+          <Link href="/services#water-quality">Water quality</Link>
+        </div>
+
+        <div>
+          <h2>Contact</h2>
+          <a href="tel:0741508321">0741 508321</a>
+          <a
+            href="https://maps.app.goo.gl/6fisaahZrBUr3st48"
+            rel="noreferrer"
+            target="_blank"
+          >
+            VP68+V2G, 1-10129
+          </a>
+          <span className="footer-hours">Mon-Thu: 8am-5pm</span>
+          <span className="footer-hours">Fri: 8am-4pm | Sat: 8am-1pm</span>
+          <Link href="/contact">Map & office details</Link>
+        </div>
+
+        <div>
+          <h2>Company</h2>
+          <Link href="/about">About us</Link>
+          <Link href="/news">News & notices</Link>
+          <Link href="/opportunities">Tenders & careers</Link>
+          <Link href="/privacy">Privacy policy</Link>
+          <Link href="/terms">Terms of use</Link>
+        </div>
       </div>
-      <div className="page-container footer-bottom"><p>© {new Date().getFullYear()} Mutitu Water and Sanitation Company Limited.</p><p>Draft public website · Company details require approval before launch.</p></div>
+
+      <div className="page-container footer-bottom">
+        <p>© {new Date().getFullYear()} Mutitu Water Project.</p>
+      </div>
     </footer>
   );
 }

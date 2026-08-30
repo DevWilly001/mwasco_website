@@ -11,7 +11,13 @@ export function ContentPage({ page }: { page: SitePage }) {
             <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><strong>{page.eyebrow}</strong></nav>
             <p className="eyebrow eyebrow-light"><span />{page.eyebrow}</p><h1>{page.title}</h1><p className="inner-intro">{page.intro}</p>
           </div>
-          <aside className="feature-card"><small>{page.feature.label}</small><strong>{page.feature.value}</strong><p>{page.feature.note}</p></aside>
+          {page.feature && (
+            <aside className="feature-card">
+              <small>{page.feature.label}</small>
+              <strong>{page.feature.value}</strong>
+              <p>{page.feature.note}</p>
+            </aside>
+          )}
         </div>
       </section>
       <section className="page-body"><div className="page-container content-stack">
