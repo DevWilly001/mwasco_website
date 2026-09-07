@@ -36,9 +36,6 @@ export function SiteFooter() {
               <small>Water for prosperity</small>
             </span>
           </Link>
-          <p>
-            Clear access to Mutitu Water Project services and customer support.
-          </p>
         </div>
 
         <div>

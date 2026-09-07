@@ -23,11 +23,11 @@ export const sitePages: SitePage[] = [
     title: "Water service for the community.",
     intro:
       "Mutitu Water Project supports access to reliable water services for homes, institutions and businesses.",
-    feature: {
-      label: "Our focus",
-      value: "Reliable water",
-      note: "Clear information, responsible operations and practical customer support.",
-    },
+    // feature: {
+    //   label: "Our focus",
+    //   value: "Reliable water",
+    //   note: "Clear information, responsible operations and practical customer support.",
+    // },
     sections: [
       {
         label: "What we do",
@@ -130,16 +130,16 @@ export const sitePages: SitePage[] = [
           },
         ],
       },
-      {
-        label: "Before calling",
-        title: "Have these details ready",
-        bullets: [
-          "Exact location",
-          "Type of problem",
-          "When it started",
-          "A callback number",
-        ],
-      },
+      // {
+      //   label: "Before calling",
+      //   title: "Have these details ready",
+      //   bullets: [
+      //     "Exact location",
+      //     "Type of problem",
+      //     "When it started",
+      //     "A callback number",
+      //   ],
+      // },
     ],
     cta: {
       title: "Need immediate help?",
