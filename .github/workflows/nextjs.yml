@@ -74,6 +74,7 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
             ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true
       - name: Install dependencies
+        working-directory: mwasco/
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
