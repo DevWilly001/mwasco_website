@@ -10,7 +10,10 @@ export const metadata: Metadata = {
   title: { default: "Mutitu Water Project", template: "%s | Mutitu Water Project" },
   description: "Access Mutitu Water Project services, notices and customer support.",
   applicationName: "Mutitu Water Project",
-  icons: { icon: "/assets/logo.jpg", apple: "/assets/logo.jpg" },
+  icons: {
+    icon: "/mwasco_website/assets/logo.jpg",
+    apple: "/mwasco_website/assets/logo.jpg",
+  },
   keywords: ["Mutitu Water Project", "Mutitu Water", "water services Kenya", "water connection"],
   openGraph: {
     type: "website",

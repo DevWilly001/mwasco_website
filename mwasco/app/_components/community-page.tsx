@@ -71,7 +71,7 @@ export function CommunityPage() {
               alt="Illustrative view of residents using a maintained community water point"
               fill
               sizes="(max-width: 900px) 100vw, 55vw"
-              src="/assets/community-water-point.png"
+              src="/mwasco_website/assets/community-water-point.png"
             />
             <figcaption>Illustrative community water-point image</figcaption>
           </figure>
@@ -154,7 +154,7 @@ export function CommunityPage() {
               alt="Illustrative view of water technicians inspecting community pipeline infrastructure"
               fill
               sizes="(max-width: 900px) 100vw, 50vw"
-              src="/assets/community-pipeline-maintenance.png"
+              src="/mwasco_website/assets/community-pipeline-maintenance.png"
             />
             <figcaption>Illustrative field-maintenance image</figcaption>
           </figure>
@@ -168,7 +168,7 @@ export function CommunityPage() {
               alt="Illustrative community consultation between residents and water-project staff"
               fill
               sizes="(max-width: 900px) 100vw, 50vw"
-              src="/assets/community-engagement.png"
+              src="/mwasco_website/assets/community-engagement.png"
             />
             <figcaption>Illustrative community-engagement image</figcaption>
           </figure>

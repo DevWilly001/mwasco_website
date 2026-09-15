@@ -100,7 +100,7 @@ export function SiteHeader() {
           >
             <Image
               className="brand-logo"
-              src="/assets/logo.jpg"
+              src="/mwasco_website/assets/logo.jpg"
               alt=""
               width={96}
               height={96}

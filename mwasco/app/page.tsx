@@ -54,7 +54,7 @@ export default function Home() {
       <section className="hero-shell">
         <Image
           className="hero-photo"
-          src="/assets/mutitu-water-project-hero.jpg"
+          src="/mwasco_website/assets/mutitu-water-project-hero.jpg"
           alt="Entrance to the Mutitu Water Project office"
           fill
           priority
