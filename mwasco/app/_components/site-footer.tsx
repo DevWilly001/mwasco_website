@@ -41,7 +41,7 @@ export function SiteFooter() {
         <div>
           <h2>Services</h2>
           <Link href="/services#new-connection">New connection</Link>
-          <Link href="/services#billing-payments">Billing & payments</Link>
+          <Link href="/services#billing-payments">Payment options</Link>
           <Link href="/services#tariffs">Tariffs & charges</Link>
           <Link href="/services#service-areas">Service areas</Link>
           <Link href="/services#water-quality">Water quality</Link>
@@ -65,6 +65,7 @@ export function SiteFooter() {
         <div>
           <h2>Company</h2>
           <Link href="/about">About us</Link>
+          <Link href="/community">Community work</Link>
           <Link href="/news">News & notices</Link>
           <Link href="/opportunities">Tenders & careers</Link>
           <Link href="/privacy">Privacy policy</Link>

@@ -100,6 +100,20 @@ export const sitePages: SitePage[] = [
     },
   },
   {
+    slug: "community",
+    eyebrow: "Community",
+    title: "Water service shaped around everyday community needs.",
+    intro:
+      "Learn how community feedback, responsible operations and practical support can strengthen local water services.",
+    sections: [],
+    cta: {
+      title: "Share a community concern",
+      body: "Contact Mutitu Water Project about water access and local service needs.",
+      label: "Contact us",
+      href: "/contact",
+    },
+  },
+  {
     slug: "report-a-problem",
     eyebrow: "Report a problem",
     title: "Report a water-service problem.",
@@ -148,29 +162,18 @@ export const sitePages: SitePage[] = [
       href: "tel:0741508321",
     },
   },
-  {
-    slug: "news",
-    eyebrow: "News & notices",
-    title: "Project news and public notices.",
-    intro: "Approved updates will be published here in date order.",
-    feature: {
-      label: "Status",
-      value: "No posts yet",
-      note: "New project updates will appear here.",
-    },
-    sections: [
-      {
-        label: "Updates",
-        title: "No news published",
-        body: "Project updates, public notices and community information will appear here once approved.",
+    {
+      slug: "news",
+      eyebrow: "News & notices",
+      title: "Service notices and public updates, in one place.",
+      intro: "Read planned maintenance, interruption and restoration updates published for customers.",
+      sections: [],
+      cta: {
+        title: "Need to report a problem?",
+        body: "Tell the service team about a leak, low pressure or loss of supply.",
+        label: "Report a problem",
+        href: "/report-a-problem",
       },
-    ],
-    cta: {
-      title: "Looking for a supply notice?",
-      body: "Current water notices appear on the homepage.",
-      label: "View homepage notices",
-      href: "/#service-updates",
-    },
   },
   {
     slug: "downloads",
@@ -270,6 +273,44 @@ export const sitePages: SitePage[] = [
     },
     sections: [],
     cta: { title: "", body: "", label: "", href: "/" },
+  },
+  {
+    slug: "customer-portal",
+    eyebrow: "Customer portal",
+    title: "Your water account, in one secure place.",
+    intro:
+      "Customer account access will allow you to check bills, view payment history and submit meter readings online.",
+    feature: {
+      label: "Portal access",
+      value: "Account setup",
+      note: "Secure account registration will be enabled once the customer portal is connected.",
+    },
+    sections: [
+      {
+        label: "What you will be able to do",
+        title: "Manage your account online",
+        cards: [
+          {
+            title: "Check your bill",
+            body: "View your current account balance and payment history.",
+          },
+          {
+            title: "Submit meter readings",
+            body: "Send a current meter reading for your account.",
+          },
+          {
+            title: "Keep your details current",
+            body: "Review your account contact information and service address.",
+          },
+        ],
+      },
+    ],
+    cta: {
+      title: "Need account help now?",
+      body: "Contact the office for billing, meter-reading and account support.",
+      label: "Contact the office",
+      href: "/contact",
+    },
   },
   {
     slug: "privacy",

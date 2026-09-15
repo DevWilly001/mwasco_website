@@ -14,7 +14,7 @@ const serviceLinks = [
   ["All services", "/services#all-services"],
   ["Service areas & schedules", "/services#service-areas"],
   ["New water connection", "/services#new-connection"],
-  ["Billing & payments", "/services#billing-payments"],
+  ["Payment options", "/services#billing-payments"],
   ["Tariffs & charges", "/services#tariffs"],
   ["Water quality", "/services#water-quality"],
 ];
@@ -162,7 +162,7 @@ export function SiteHeader() {
           </nav>
           <Link
             className="portal-link"
-            href="/services#billing-payments"
+            href="/customer-portal"
             onClick={closeMenus}
           >
             <span className="portal-dot" /> Customer portal <strong>→</strong>

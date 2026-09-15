@@ -1,16 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
+import { sampleNotices } from "./_data/notices";
 
 const quickActions = [
   {
     number: "01",
     title: "Check your bill",
     copy: "View your balance and recent account activity.",
-    href: "/services#billing-payments",
+    href: "/customer-portal",
   },
   {
     number: "02",
-    title: "Pay your bill",
+    title: "Check payment options",
     copy: "Find verified payment instructions and receipts.",
     href: "/services#billing-payments",
   },
@@ -33,7 +34,7 @@ const services = [
   {
     label: "Water supply",
     title: "Reliable water for homes, institutions and businesses",
-    href: "/services#all-services",
+    href: "/services#service-areas",
   },
   {
     label: "Customer support",
@@ -76,7 +77,7 @@ export default function Home() {
             </p>
             <div className="hero-actions">
               <Link className="button button-lime" href="/services#billing-payments">
-                Pay water bill <span>→</span>
+                Check payment options <span>→</span>
               </Link>
               <Link className="button button-alert" href="#service-updates">
                 View water updates
@@ -152,50 +153,39 @@ export default function Home() {
             </Link>
           </div>
           <div className="updates-grid">
-            <article className="update-card update-card-empty">
-              <div className="update-card-top">
-                <span className="update-badge">Website notice status</span>
-                <span className="update-count">00 active</span>
-              </div>
-              <div className="update-card-body">
-                <span className="update-symbol" aria-hidden="true">
-                  ~
-                </span>
-                <h3>No active interruption notices published</h3>
-                <p>
-                  New planned or emergency interruption notices will appear here
-                  as soon as they are published by Mutitu Water Project.
-                </p>
-              </div>
-              <div className="update-card-footer">
-                <span className="update-dot" /> This reflects notices published
-                on this website.
-              </div>
-            </article>
-            <article className="update-card update-card-guide">
-              <div className="update-card-top">
-                <span className="update-badge">Every notice includes</span>
-                <span className="update-count">Clear details</span>
-              </div>
-              <h3>Know what is happening and when service should return.</h3>
-              <dl className="update-fields">
-                <div>
-                  <dt>Area</dt>
-                  <dd>Affected service zones</dd>
+            {sampleNotices.map((notice) => (
+              <article
+                className={`update-card update-notice-card update-notice-${notice.status.toLowerCase()}`}
+                key={notice.id}
+              >
+                <div className="update-card-top">
+                  <span className="update-badge">Sample notice</span>
+                  <span className="update-count">{notice.status}</span>
                 </div>
-                <div>
-                  <dt>Timing</dt>
-                  <dd>Start and restoration estimate</dd>
+                <div className="update-card-body">
+                  <span className="update-symbol" aria-hidden="true">!</span>
+                  <p className="update-category">{notice.category}</p>
+                  <h3>{notice.title}</h3>
+                  <p>{notice.summary}</p>
                 </div>
-                <div>
-                  <dt>Status</dt>
-                  <dd>Scheduled, ongoing or restored</dd>
+                <dl className="update-card-meta">
+                  <div>
+                    <dt>Area</dt>
+                    <dd>{notice.area}</dd>
+                  </div>
+                  <div>
+                    <dt>Timing</dt>
+                    <dd>{notice.timing}</dd>
+                  </div>
+                </dl>
+                <div className="update-card-footer">
+                  <span><i className="update-dot" /> Demo content only</span>
+                  <Link className="update-more-link" href={`/news#${notice.id}`}>
+                    More <span>→</span>
+                  </Link>
                 </div>
-              </dl>
-              <Link href="/report-a-problem">
-                Report an unlisted problem <span>↗</span>
-              </Link>
-            </article>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -210,13 +200,14 @@ export default function Home() {
               </p>
               <h2>Built around the communities we serve.</h2>
             </div>
-            <Link className="text-link" href="/services#all-services">
-              Explore all services <span>→</span>
+            <Link className="text-link" href="/community">
+              Explore our community work <span>→</span>
             </Link>
           </div>
           <div className="service-grid">
             {services.map((service, index) => (
               <Link
+                aria-label={`Learn more about ${service.label}`}
                 className="service-card"
                 href={service.href}
                 key={service.label}
